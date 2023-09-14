@@ -1,11 +1,16 @@
-# 02-03-run-a-job-with-a-matrix-strategy
-Use these files to demonstrate running a job with a matrix strategy.
+# 03_03-publishing-container-images
+Use these files to demonstrate publishing a container image to the GitHub Package registry.
 
-1. Create a new repo.
+1. Create a new, public repo.
 1. Add the files from this directory to the root of the new repo.
-1. Move the `nodejs-matrix.yml` file into the `.github/workflows` directory in the new repo.
-1. On the **Actions** tab, use the dispatch trigger to run the workflow.
-1. Wait until the workflow completes.
-1. Review the output of the workflow to see the combination of jobs.
-1. Review the output of a few jobs to see how the matrix configurations for platform and node version were applied.
-1. Also, review the output of the test step to see the differences for each platform.
+1. Create a workflow from the console by selecting the **Actions** tab.
+1. Locate the worklow named "Publish Docker Container by GitHub Actions". _If this does not show up as an option, type "Publish Docker Container" into the search bar to locate it._
+1. Click **Configure**.
+1. In the workflow editor, remove any `schedule` triggers.
+1. Click **Start commit**, **Commit new file**.
+1. Go to the **Actions** tab to confirm the workflow has been triggered.
+1. Wait until the workflows complete.
+1. Go to the **Code** tab to confirm the container image has been published.
+1. Go to your profile home page at `https://github.com/YOUR_GITHUB_USER_NAME`.  Select the **Packages** tab.
+1. Confirm the container appears as a package.
+
